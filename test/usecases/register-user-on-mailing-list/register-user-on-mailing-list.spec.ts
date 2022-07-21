@@ -7,9 +7,9 @@ describe('Register user on mailing list use case', () => {
     // const repo: UserRepository = new InMemoryUserRepository(users)
     // const usecase: RegisterUserOnMailingList = new RegisterUserOnMailingList(repo)
     // const name = 'any_name'
-    // const email = 'any@email.com'
+    // const email = 'any@mail.com'
     // const response = await usecase.registerUserOnMailingList({ name, email })
-    // const user = repo.findUserByEmail('any@email.com')
+    // const user = repo.findUserByEmail('any@mail.com')
     // expect((await user).name).toBe('any_name')
   })
 })
