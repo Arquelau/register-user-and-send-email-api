@@ -1,5 +1,3 @@
-import { domainToASCII } from "url"
-
 export class Email {
   static validate (email: string): boolean {
     if (!email) {
