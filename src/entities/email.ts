@@ -7,9 +7,9 @@ export class Email {
     if (email.length > 320) {
       return false
     }
-    // const [local, domain] = email.split('@')
-    const [local] = email.split('@')
-    if (local.length > 64) {
+    const [local, domain] = email.split('@')
+
+    if (local.length > 64 || domain.length > 255) {
       return false
     }
 
