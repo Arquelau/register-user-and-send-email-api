@@ -1,3 +1,5 @@
+import { domainToASCII } from "url"
+
 export class Email {
   static validate (email: string): boolean {
     if (!email) {
@@ -14,6 +16,13 @@ export class Email {
     }
 
     if (domain.length > 255 || domain.length === 0) {
+      return false
+    }
+
+    const domainParts = domain.split('.')
+    if (domainParts.some(function (part) {
+      return part.length > 63
+    })) {
       return false
     }
 
