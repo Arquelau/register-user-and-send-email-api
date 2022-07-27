@@ -1,4 +1,4 @@
-import { User } from 'entities/'
+import { User } from '@/entities'
 
 describe('User domain class', () => {
   test('should not create user with invalid e-mail adress', () => {

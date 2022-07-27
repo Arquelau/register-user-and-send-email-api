@@ -1,5 +1,5 @@
-import { Either, left, right } from 'share'
-import { InvalidEmailError } from './errors'
+import { Either, left, right } from '@/share'
+import { InvalidEmailError } from '@/entities/errors'
 
 export class Email {
   public readonly value: string
