@@ -22,7 +22,7 @@ describe('Register user on mailing list use case', () => {
     const usecase: RegisterUserOnMailingList = new RegisterUserOnMailingList(repo)
     const name = 'any_name'
     const invalidEmail = 'invalid_email'
-    const response = (await usecase.registerUserOnMailingList({ name: name, email: invalidEmail })).value as Error
+    const response = (await usecase.registerUserOnMailingList({ name, email: invalidEmail })).value as Error
     const user = await repo.findUserByEmail(invalidEmail)
     expect(user).toBeNull()
     expect(response.name).toEqual('InvalidEmailError')
@@ -34,7 +34,7 @@ describe('Register user on mailing list use case', () => {
     const usecase: RegisterUserOnMailingList = new RegisterUserOnMailingList(repo)
     const invalidName = ''
     const email = 'any@mail.com'
-    const response = (await usecase.registerUserOnMailingList({ name: invalidName, email: email })).value as Error
+    const response = (await usecase.registerUserOnMailingList({ name: invalidName, email })).value as Error
     const user = await repo.findUserByEmail(email)
     expect(user).toBeNull()
     expect(response.name).toEqual('InvalidNameError')
