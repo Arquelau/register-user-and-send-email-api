@@ -7,7 +7,7 @@ describe('Register route', () => {
       res.send()
     })
     await request(app)
-      .post('/api/resgister')
+      .post('/api/register')
       .send({
         name: 'Any name',
         email: 'any@mail.com'
