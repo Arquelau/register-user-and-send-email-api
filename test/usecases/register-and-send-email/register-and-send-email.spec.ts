@@ -82,8 +82,6 @@ describe('Register user on mailing list use case', () => {
     const invalidName = 'a'
     const email = 'any@mail.com'
     const response = (await registerAndSendEmailUseCase.perform({ name: invalidName, email })).value as Error
-    const user = await repo.findUserByEmail(email)
-    expect(user).toBeNull()
     expect(response.name).toEqual('InvalidNameError')
   })
 })
