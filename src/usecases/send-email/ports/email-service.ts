@@ -15,5 +15,5 @@ export interface EmailOptions {
 }
 
 export interface EmailService {
-  send: (options: EmailOptions) => Promise<Either<MailServiceError, EmailOptions>>
+  send(options: EmailOptions): Promise<Either<MailServiceError, EmailOptions>>
 }
