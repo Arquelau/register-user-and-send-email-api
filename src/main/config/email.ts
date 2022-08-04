@@ -1,8 +1,8 @@
 import { EmailOptions } from '@/usecases/send-email/ports'
 
 const attachmentsCustom = [{
-  filename: 'text.txt',
-  path: '../../resources/text.txt'
+  // filename: 'text.txt',
+  // path: 'resources/text.txt'
 }]
 
 export function getEmailOptions (): EmailOptions {
